@@ -1,0 +1,64 @@
+.post{
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0px 5px 7px -7px rgba(0,0,0,0.75);
+    align-items: center;
+}
+.post__image img{
+    width: 650px;
+    height:350px;
+}
+
+.post__top{
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 15px;
+}
+.post__avatar{
+    margin-right: 10px;
+}
+.post__topInfo h3{
+    font-size: medium;
+    margin-bottom: 0px;
+}
+.post__topInfo p{
+    font-size: small;
+    color: gray;
+    margin-top: 0px;
+}
+.post__bottom{
+    margin:5px 0;
+    padding: 15px 25px;
+}
+.post__options{
+    padding: 15px;
+    display: flex;
+    border-top:1px solid lightgray;
+    justify-content: space-evenly;
+    font-size: medium;
+    color: gray;
+    cursor: pointer;
+}
+.post__option{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    /* float: 1; */
+}
+.post__option p{
+    margin-left: 10px;
+}
+.post__option:hover{
+    background-color: #eff2f5;
+    border-radius: 10px;
+}
+.likedTrue{
+    color:blue;
+}
+.likedFalse{
+    color:black
+}

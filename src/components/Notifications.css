@@ -1,0 +1,16 @@
+.spinner-border{
+    position: absolute;
+    top:45%;
+    left: 20%;
+}
+.notification-parent{
+    height:300px;
+    width:300px;
+    overflow:auto;
+    position:relative;
+}
+.notification-child{
+    background:#eee;
+    padding:2px;
+    /* text-align:center */
+}
