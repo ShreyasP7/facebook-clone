@@ -104,6 +104,7 @@ const MessageSender = (props) => {
         db.collection("posts").doc(postData.postID).set(postData)
         .then(()=>{
             alert("Post Uploaded");
+            window.location.reload(false);
         })
     }
     
