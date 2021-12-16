@@ -32,7 +32,7 @@ function Header() {
 
     useEffect(() => {
         var count=0;
-        db.collection("users").doc(user.uid).collection("notifications")
+        var unsubscribe=db.collection("users").doc(user.uid).collection("notifications")
         .onSnapshot((allDocs)=>{
            
             allDocs.docs.forEach((doc)=>{
@@ -45,6 +45,9 @@ function Header() {
             })
             setBadgeCount(count);
         })
+        return () => {
+            unsubscribe();
+        };
     },[notificationSeen,badgeCount])
 
     const logoutUser=()=>{

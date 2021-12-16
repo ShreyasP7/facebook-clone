@@ -30,7 +30,7 @@ const Notifications=()=>{
 
         // const {currentUser} = this.state;
         let newNotifications=[]
-        db.collection("users").doc(user.uid).collection("notifications").onSnapshot((snapshotDocs)=>{
+        var unsubscribe=db.collection("users").doc(user.uid).collection("notifications").onSnapshot((snapshotDocs)=>{
                   newNotifications=snapshotDocs.docs.map((doc)=>doc.data());
                     
                    
@@ -39,6 +39,10 @@ const Notifications=()=>{
                     setNotificationsLoading(false);
                     // this.setState({notificationsLoading:false})
                  })
+
+               return () => {
+                  unsubscribe();
+              };
 
         // firebase.firestore().collection("counselors").doc(currentUser.uid).get()
         // .then((doc)=>{

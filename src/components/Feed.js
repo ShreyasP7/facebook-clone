@@ -15,7 +15,7 @@ const Feed = () => {
 
     useEffect(()=>{
 
-        db.collection("posts").orderBy("timestamp","desc").onSnapshot((allDocs)=>{
+        var unsubscribe=db.collection("posts").orderBy("timestamp","desc").onSnapshot((allDocs)=>{
             var allPosts=[];
             allDocs.forEach((doc)=>{
                 console.log(doc.data());
@@ -24,6 +24,9 @@ const Feed = () => {
               })
               setPostsData(allPosts);
         })
+        return () => {
+            unsubscribe();
+        };
     },[])
    
 

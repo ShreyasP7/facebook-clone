@@ -3,13 +3,14 @@ import firebase from "firebase";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCB9KcGjQ233JQAVlrnXqOvoAY3r9hLAJE",
-  authDomain: "facebook-clone-rf.firebaseapp.com",
-  projectId: "facebook-clone-rf",
-  storageBucket: "facebook-clone-rf.appspot.com",
-  messagingSenderId: "340207531438",
-  appId: "1:340207531438:web:d399fdde0f8e25fc8fc43f",
-  measurementId: "G-R39GPYM5L0"
+  apiKey: "AIzaSyBYjfXBwFpFyWi5BLXoKI4qNvZvBmNi2lc",
+  authDomain: "facebook-clone-953f7.firebaseapp.com",
+  databaseURL: "https://facebook-clone-953f7-default-rtdb.firebaseio.com",
+  projectId: "facebook-clone-953f7",
+  storageBucket: "facebook-clone-953f7.appspot.com",
+  messagingSenderId: "371959171652",
+  appId: "1:371959171652:web:72abb8a0422930219e4a11",
+  measurementId: "G-9JYXJ991W3"
 };
 
   const firebaseApp = firebase.initializeApp(firebaseConfig); 
